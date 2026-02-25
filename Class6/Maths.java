@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BasicMaths{
+public class Maths{
 
 	public static int countDigits(int n){
 		// for all cases where n != 0
@@ -66,6 +66,16 @@ public class BasicMaths{
 		return true;
 	}
 
+	public static int squareRoot(int n){
+		int possibleSquareRootAns = 0;
+		int i = 1;
+		while(i * i <= n){
+			possibleSquareRootAns = i;
+			i++;
+		}
+		return possibleSquareRootAns;
+	}
+
 	public static void main(String[] args){
 
 		Scanner scanner = new Scanner(System.in);
@@ -105,6 +115,11 @@ public class BasicMaths{
 		else{
 			System.out.println(n + " is not a power of 3");
 		}
+
+		// int sqrRoot = squareRoot(n);
+		// System.out.println("Square root of " + n + " (Floor Value) = " + sqrRoot);
+
+		System.out.println("Square root of " + n + " (Floor Value) = " + squareRoot(n));
 
 		return;	// Empty return statement - NOT MANDATORY
 	}
